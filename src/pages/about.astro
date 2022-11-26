@@ -1,4 +1,6 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
 const pageTitle = "About me and me alone";
 
 const identity = {
@@ -10,29 +12,19 @@ const identity = {
 
 const skills = ["shell-armor", "red color", "snapping", "Astro", "antennae"];
 
+// Variables for conditional content display ->
 const happy = true;
 const finished = false;
 const goal = 3;
+
+// CSS Custom Properties to be inserted with `define:vars={{ … }}`
+const skillColor = "salmon";
+const bold = "bold";
+const capitals = "uppercase"
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/blog">Blog</a>
-    </nav>
-
-    <h1>{pageTitle}</h1>
-
-    <p>Here are a few facts about me:</p>
+    <BaseLayout pageTitle={pageTitle}>
+      <p>Here are a few facts about me:</p>
     <ul>
       <li>My name is {identity.firstName}.</li>
       <li>
@@ -50,12 +42,10 @@ const goal = 3;
 
     <p>My skills are:</p>
     <ul>
-      {skills.map((skill) => <li>{skill}</li>)}
+      {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
 
     {happy && <p>I am happy to be learning Astro!</p>}
     {finished && <p>I totally ruled this tutorial and I'm done!</p>}
     {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-
-  </body>
-</html>
+    </BaseLayout>
