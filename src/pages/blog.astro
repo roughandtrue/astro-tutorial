@@ -1,4 +1,5 @@
 ---
+const pageTitle = "Trippin' Blog Page"
 ---
 
 <html lang="en">
@@ -7,7 +8,7 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>About</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<nav>
@@ -15,9 +16,14 @@
             <a href="/about">About</a>
             <a href="/blog">Blog</a>
         </nav>
-        <h1>Ma cool Blog</h1>
+        <h1>{pageTitle}</h1>
         <h2>Read what I write here.</h2>
 
         <p>Watch me post here on my Astro journey.</p>
+        <ul>
+            <li><a href="/posts/post-1">Freakin' cool first post</a></li>
+            <li><a href="/posts/post-2/">Copied second post</a></li>
+            <li><a href="/posts/post-3/">Another post that I copied</a></li>
+        </ul>
 	</body>
 </html>
