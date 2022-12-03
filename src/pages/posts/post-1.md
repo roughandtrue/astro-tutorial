@@ -1,20 +1,17 @@
 ---
+layout: ../../layouts/PostLayout.astro
 title: "Cool Post #1"
 pubDate: 2022-11-25
-description: "First amazing post of my tutorial blog"
+description: "Astro Rocks"
 author: "rough&true"
 image:
     url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
     alt: 'The Astro logo with the word One.'
 tags: ["astro","blogging","learning in public"]
+
 ---
 
-# My Cool Post #1
-
-Published on: ${frontmatter.pubDate}
-
 Welcome to this extremely cool first post. I am learning Astro and you're following along.
-
 ## Accomplishments so far
 Not that I'm prone to bragging, but …
 

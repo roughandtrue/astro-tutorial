@@ -30,7 +30,7 @@ html {
     width: 40px;
     height: 5px;
     margin-bottom: 10px;
-    background-color: #ff9776;
+    background-color: #4c1d95;
   }
 
 .nav-links {
@@ -60,18 +60,47 @@ html {
   display: unset;
 }
 
+
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.tag {
+  margin: 0.25em;
+  border: dotted 1px #a1a1a1;
+  border-radius: .5em;
+  padding: .5em 1em;
+  font-size: 1.15em;
+  background-color: #F8FCFD;
+  letter-spacing: 0.025em;
+  font-family: Inconsolata;
+}
+.tag a {
+    color: #00539F;
+  }
+  .tag a:hover {
+  text-decoration: none;
+}
+
+/* Desktop (Larger than 636px) */
 @media screen and (min-width: 636px) {
   .nav-links {
-    margin-left: 5em;
     display: block;
     position: static;
     width: auto;
     background: none;
+    margin-block-end: 2rem;
   }
 
   .nav-links a {
+    border-radius: var(--border-radius, .25em);
+    border: max(2px, .2em) solid #4c1d95;
     display: inline-block;
-    padding: 15px 20px;
+    padding: .5em 1.25em;
+    margin-inline-end: .5rem;
   }
   .hamburger {
     display: none;
